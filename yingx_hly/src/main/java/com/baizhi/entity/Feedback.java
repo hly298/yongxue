@@ -1,5 +1,6 @@
 package com.baizhi.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -26,6 +27,7 @@ public class Feedback {
     @Column(name="user_id")
     private String userId;
 
+    @JsonFormat(pattern = "yyyy-MM-dd")
     @Column(name="create_time")
     private Date createTime;
 
